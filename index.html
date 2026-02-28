@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<style>
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #1f1c2c, #928dab);
+
+  --card-bg: #2e2a38;
+  --card-surface: #1e1b26;
+
+  --text-primary: #ffffff;
+  --text-muted: #cfcfcf;
+
+  --btn-bg: #3d394c;
+  --btn-hover: #58546a;
+  --btn-active: #2c2835;
+
+  --radius-lg: 24px;
+  --radius-md: 14px;
+
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.55);
+  --transition: 0.2s cubic-bezier(.4,.2,.2,1);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gradient);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text-primary);
+}
+
+
+#hie {
+  width: 320px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+}
+
+#hie:hover {
+  transform: translateY(-4px);
+}
+
+
+#bye {
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+
+
+#oops {
+  width: 100%;
+  height: 65px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: none;
+  outline: none;
+  background: var(--card-surface);
+  color: var(--text-primary);
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 20px;
+  box-shadow:
+    inset 0 4px 8px rgba(0,0,0,0.6),
+    inset 0 -1px 1px rgba(255,255,255,0.05);
+}
+
+
+table {
+  width: 100%;
+  border-spacing: 12px;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--btn-bg);
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+button:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  background: var(--btn-active);
+  transform: scale(0.96);
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 400px) {
+  #hie {
+    width: 95%;
+    padding: 20px;
+  }
+
+  #oops {
+    font-size: 20px;
+    height: 55px;
+  }
+
+  button {
+    height: 45px;
+  }
+}
+
+
+
+</style>
+<body>
+    <div id="hie">
+        <table id="bye">
+            <tr>
+                <td>Calculator</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="oops" placeholder="Enter a number"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><button onclick="one()">1</button></td>
+                <td><button onclick="two()">2</button></td>
+                <td><button onclick="three()">3</button></td>
+                <td><button onclick="sla()">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="fo()">4</button></td>
+                <td><button onclick="fi()">5</button></td>
+                <td><button onclick="si()">6</button></td>
+                <td><button onclick="mul()">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="se()">7</button></td>
+                <td><button onclick="eig()">8</button></td>
+                <td><button onclick="ni()">9</button></td>
+                <td><button onclick="add()">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="sub()">-</button></td>
+                <td><button onclick="zero()">0</button></td>
+                <td><button onclick="clr()">C</button></td>
+                <td><button onclick="calc()">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function one(){
+    a=document.getElementById("oops")
+    a.value+="1"
+}
+function two(){
+    a=document.getElementById("oops")
+    a.value+="2"
+}
+function three(){
+    a=document.getElementById("oops")
+    a.value+="3"
+}
+function sla(){
+    a=document.getElementById("oops")
+    a.value+="/"
+}xxxxxxx`
+function fo(){
+    a=document.getElementById("oops")
+    a.value+="4"
+}
+function fi(){
+    a=document.getElementById("oops")
+    a.value+="5"
+}
+function si(){
+    a=document.getElementById("oops")
+    a.value+="6"
+}
+function mul(){
+    a=document.getElementById("oops")
+    a.value+="*"
+}
+function se(){
+    a=document.getElementById("oops")
+    a.value+="7"
+}
+function eig(){
+    a=document.getElementById("oops")
+    a.value+="8"
+}
+function ni(){
+    a=document.getElementById("oops")
+    a.value+="9"
+}
+function add(){
+    a=document.getElementById("oops")
+    a.value+="+"
+}
+function sub(){
+    a=document.getElementById("oops")
+    a.value+="-"
+}
+function zero(){
+    a=document.getElementById("oops")
+    a.value+="0"
+}
+function clr(){
+    a=document.getElementById("oops")
+    a.value=""
+}
+function calc(){
+    a=document.getElementById("oops")
+    a.value=eval(a.value)
+}
+
+</script>
+</html>
